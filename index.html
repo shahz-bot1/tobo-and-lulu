@@ -169,28 +169,16 @@ footer a{color:#082F49;font-weight:800;text-decoration:underline}
 .subscribe-strip h2{font-size:clamp(26px,4vw,34px);margin:0 0 4px}
 .subscribe-strip p{margin:0;font-weight:700;line-height:1.5}
 .star{position:absolute;z-index:0;pointer-events:none;color:#FFD93D;font-size:20px;animation:floaty 3.5s ease-in-out infinite;text-shadow:0 1px 2px rgba(2,132,199,.35)}
-/* CONTACT */
-.email-card{margin-top:22px;background:var(--card);border:3px solid var(--border);border-radius:28px;box-shadow:var(--shadow);padding:26px;text-align:center}
-.email-card h2{font-size:clamp(28px,4vw,38px);margin:0 0 6px}
-.email-card p{margin:0;color:var(--muted);font-weight:700;line-height:1.5}
-.email-btn{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px;background:var(--sky);color:#062A42;text-decoration:none;font-family:"Baloo 2",sans-serif;font-weight:800;font-size:clamp(19px,3.4vw,26px);padding:16px 24px;border-radius:999px;box-shadow:0 5px 0 var(--sky-deep);word-break:break-all}
-.email-btn:hover{transform:translateY(-2px)}
-.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
-.social-card{background:var(--card);border:3px solid var(--border);border-radius:26px;box-shadow:var(--shadow);padding:22px 18px;text-align:center;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;transition:.18s}
-.social-card:hover{transform:translateY(-4px)}
-.social-icon{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;color:#fff;margin-bottom:6px}
-.social-icon svg{width:34px;height:34px;fill:#fff;display:block}
-.social-icon.yt{background:#FF0000}
-.social-icon.ig{background:linear-gradient(45deg,#F09433,#E6683C,#DC2743,#CC2366,#BC1888)}
-.social-icon.fb{background:#1877F2}
-.social-card h3{font-size:22px;margin:0;line-height:1.05}
-.social-card p{margin:0;color:var(--muted);font-weight:700;line-height:1.45;font-size:15px}
-.social-card .handle{font-weight:800;color:var(--link);font-size:16px;word-break:break-word}
-.contact-note{margin:22px 0 36px;text-align:center;color:var(--muted);font-weight:700;line-height:1.5;font-size:14.5px;max-width:640px;margin-left:auto;margin-right:auto}
+/* FOOTER */
 .footer-socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
 .footer-socials a{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.9);color:#082F49;text-decoration:none;font-weight:800;font-size:14px;padding:8px 12px;border-radius:999px}
 .footer-socials a:hover{background:#fff}
-@media(max-width:900px){.social-grid{grid-template-columns:1fr}}
+.footer-contact{margin-top:16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-weight:800;font-size:15px;color:#102E3E}
+.footer-contact a{color:#082F49;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.footer-contact a:hover{color:#0369A1}
+.footer-contact .sep{opacity:.6;font-weight:700}
+.footer-copyright{margin-top:22px;padding-top:16px;border-top:2px solid rgba(255,255,255,.55);font-size:13.5px;font-weight:700;color:#33505E;line-height:1.5}
+[data-theme="dark"] .footer-copyright{color:#1E3A4C}
 @media(max-width:900px){.hero-grid,.grid2,.parents,.waitlist,.word-widget{grid-template-columns:1fr}.grid4,.product-grid{grid-template-columns:1fr 1fr}.cups-grid{grid-template-columns:1fr 1fr}.grid3,.steps{grid-template-columns:1fr}.nav-links{display:none}.word-display{min-width:0}}
 @media(max-width:640px){
   .hero-grid{padding-top:30px}
@@ -216,7 +204,6 @@ footer a{color:#082F49;font-weight:800;text-decoration:underline}
       <button id="tabHome" class="active" onclick="showView('home')">🏠 Home</button>
       <button id="tabVideos" onclick="showView('videos')">🎬 Videos</button>
       <button id="tabShop" onclick="showView('shop')">🛍️ Shop</button>
-      <button id="tabContact" onclick="showView('contact')">✉️ Contact</button>
     </nav>
     <nav class="nav-links" id="homeLinks">
       <a href="#meet">Meet Tobo &amp; Lulu</a><a href="#" onclick="showView('videos');return false;">Videos</a><a href="#learn">Learn</a><a href="#parents">For Parents</a><a href="#" onclick="showView('shop');return false;">Shop</a>
@@ -368,45 +355,28 @@ footer a{color:#082F49;font-weight:800;text-decoration:underline}
   </div>
 </main>
 
-<!-- ============ CONTACT VIEW ============ -->
-<main id="view-contact" class="hidden-view">
-  <div class="wrap" style="padding-top:22px">
-    <section class="shop-hero">
-      <span class="eyebrow">✉️ Contact • For grown-ups</span>
-      <h1 style="font-size:clamp(44px,7vw,72px);margin:14px 0 6px">Contact Us</h1>
-      <p style="font-size:19px;font-weight:700;color:var(--ink2);max-width:640px;margin:0;line-height:1.5">Hello, grown-ups! Questions, ideas, or just want to say hello? We would love to hear from you.</p>
-    </section>
-
-    <section class="email-card" aria-label="Email us">
-      <div style="font-size:52px;line-height:1">✉️</div>
-      <h2>Email us</h2>
-      <p>We read every message and reply as soon as we can.</p>
-      <a class="email-btn" href="mailto:toboandlulu@gmail.com">✉️ toboandlulu@gmail.com</a>
-    </section>
-
-    <h2 style="font-size:36px;margin:30px 0 4px">Find us online</h2>
-    <p style="color:var(--muted);font-weight:700;margin:0">Watch, follow and say hello — we post new videos and little updates every week.</p>
-    <div class="social-grid">
-      <a class="social-card" href="https://www.youtube.com/@ToboAndLulu" target="_blank" rel="noopener" aria-label="Watch us on YouTube, @ToboAndLulu">
-        <span class="social-icon yt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.85-.5-5.7a2.9 2.9 0 0 0-2.05-2.05C18.6 3.75 12 3.75 12 3.75s-6.6 0-8.45.5A2.9 2.9 0 0 0 1.5 6.3C1 8.15 1 12 1 12s0 3.85.5 5.7a2.9 2.9 0 0 0 2.05 2.05c1.85.5 8.45.5 8.45.5s6.6 0 8.45-.5a2.9 2.9 0 0 0 2.05-2.05C23 15.85 23 12 23 12ZM9.75 15.5v-7L15.5 12l-5.75 3.5Z"/></svg></span>
-        <h3>Watch us on YouTube</h3><span class="handle">@ToboAndLulu</span><p>All our videos, in one friendly place.</p>
-      </a>
-      <a class="social-card" href="https://www.instagram.com/toboandlulu" target="_blank" rel="noopener" aria-label="Follow us on Instagram, @toboandlulu">
-        <span class="social-icon ig"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.7 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85C2.42 3.92 3.94 2.38 7.15 2.27 8.42 2.21 8.8 2.2 12 2.2Zm0 3.68a6.12 6.12 0 1 0 0 12.24 6.12 6.12 0 0 0 0-12.24Zm0 10.1a3.98 3.98 0 1 1 0-7.96 3.98 3.98 0 0 1 0 7.96Zm6.36-11.85a1.43 1.43 0 1 0 0 2.86 1.43 1.43 0 0 0 0-2.86Z"/></svg></span>
-        <h3>Follow us on Instagram</h3><span class="handle">@toboandlulu</span><p>Photos, news and behind-the-scenes smiles.</p>
-      </a>
-      <a class="social-card" href="https://www.facebook.com/ToboAndLulu" target="_blank" rel="noopener" aria-label="Find us on Facebook, English with Tobo and Lulu">
-        <span class="social-icon fb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07Z"/></svg></span>
-        <h3>Find us on Facebook</h3><span class="handle">English with Tobo &amp; Lulu</span><p>Updates for parents, teachers and families.</p>
-      </a>
+<footer>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <div>
+        <div style="font-family:'Baloo 2';font-size:26px;font-weight:800;color:#102E3E">English with Tobo &amp; Lulu ⭐</div>
+        <p style="font-weight:700;max-width:480px;line-height:1.5;margin:8px 0 0">Little Stars Kindergarten • Short, friendly English for ages 2–6.<br>Watch at <a href="https://www.youtube.com/@ToboAndLulu" target="_blank" rel="noopener">youtube.com/@ToboAndLulu</a></p>
+        <div class="footer-socials">
+          <a href="https://www.youtube.com/@ToboAndLulu" target="_blank" rel="noopener">▶ YouTube</a>
+          <a href="https://www.instagram.com/toboandlulu" target="_blank" rel="noopener">📸 Instagram</a>
+          <a href="https://www.facebook.com/ToboAndLulu" target="_blank" rel="noopener">👍 Facebook</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:toboandlulu@gmail.com">✉️ Contact Us</a>
+          <span class="sep" aria-hidden="true">·</span>
+          <a href="mailto:toboandlulu@gmail.com">toboandlulu@gmail.com</a>
+        </div>
+      </div>
+      <div style="font-weight:700;line-height:1.7;color:#102E3E">Home • Videos • Shop</div>
     </div>
-
-    <p class="contact-note">This page is for grown-ups. Please do not send personal information about children.</p>
-    <p style="text-align:center;color:var(--muted);font-weight:700;padding:0 0 10px"><a href="#" onclick="showView('home');return false;" style="font-weight:800">← Back to Home</a></p>
+    <div class="footer-copyright">© 2026 English with Tobo &amp; Lulu. All rights reserved.</div>
   </div>
-</main>
-
-<footer><div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap"><div><div style="font-family:'Baloo 2';font-size:26px;font-weight:800;color:#102E3E">English with Tobo &amp; Lulu ⭐</div><p style="font-weight:700;max-width:480px;line-height:1.5">Little Stars Kindergarten • Short, friendly English for ages 2–6.<br>Watch at <a href="https://www.youtube.com/@ToboAndLulu" target="_blank" rel="noopener">youtube.com/@ToboAndLulu</a></p><div class="footer-socials"><a href="https://www.youtube.com/@ToboAndLulu" target="_blank" rel="noopener">▶ YouTube</a><a href="https://www.instagram.com/toboandlulu" target="_blank" rel="noopener">📸 Instagram</a><a href="https://www.facebook.com/ToboAndLulu" target="_blank" rel="noopener">👍 Facebook</a><a href="mailto:toboandlulu@gmail.com">✉️ toboandlulu@gmail.com</a></div></div><div style="font-weight:700;line-height:1.7">Home • Videos • Shop • Contact<br><span style="color:#33505E">© 2026 English with Tobo &amp; Lulu. Made with 💛 for little learners.</span></div></div></footer>
+</footer>
 
 <div class="toast" id="toast" role="status"></div>
 
@@ -432,14 +402,12 @@ function sayWord(){toast(words[wi].e+' '+words[wi].w+' — '+words[wi].s+' Say i
 renderWord();
 
 function showView(v){
-  var home=v==='home', videos=v==='videos', shop=v==='shop', contact=v==='contact';
+  var home=v==='home', videos=v==='videos', shop=v==='shop';
   document.getElementById('view-home').classList.toggle('hidden-view',!home);
   document.getElementById('view-videos').classList.toggle('hidden-view',!videos);
   document.getElementById('view-shop').classList.toggle('hidden-view',!shop);
-  document.getElementById('view-contact').classList.toggle('hidden-view',!contact);
   document.getElementById('tabHome').classList.toggle('active',home);
   document.getElementById('tabVideos').classList.toggle('active',videos);
-  document.getElementById('tabContact').classList.toggle('active',contact);
   var ts=document.getElementById('tabShop'); ts.classList.toggle('active',shop); ts.classList.toggle('shop-active',shop);
   document.getElementById('homeLinks').style.display=home?'flex':'none';
   window.scrollTo({top:0,behavior:'smooth'});
